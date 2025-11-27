@@ -5,31 +5,32 @@ This project predicts participant personality clusters based on anonymized behav
 
 ## Project Structure
 ```
-ML_Personality_Cluster_Project/
-│
-├── models/
-│   ├── mlp_a.py
-│   ├── mlp_b.py
-│   ├── mlp_c.py
-│   ├── ft_small.py
-│   └── meta_lgbm_model.joblib 
-│
-├── scripts/
-│   ├── train_all_nns.py              # trains NN base models
-│   ├── generate_oof_test_probs.py    # saves OOF + test preds
-│   ├── meta_stack_logreg.py
-│   ├── meta_superstack_lgbm.py
-│   ├── make_final_soup.py            # FINAL SOUP
-│
-├── submissions/
-│   ├── submission_meta_tuned.csv
-│   ├── submission_meta_blend.csv
-│   ├── submission_stacked.csv
-│   ├── submission_superstack_blend.csv
-│   └── submission_final_soup.csv     # BEST (score: 0.639)
-│
-├── ML_Project_Final_Report.pdf       
-└── README.md
+Multidimensional-Personality-Cluster-Prediction/
+├── README.md                      # Project overview, quick start, links to scripts
+├── data/                      # Original uploaded CSVs 
+│   │   ├── train.csv
+│   │   └── test.csv
+│   └── sample_submission.csv
+├── Light_Gradient_Boosting/       # LGBM-specific scripts & outputs
+│   ├── train_lgbm_fe_kfold.py
+│   ├── tune_lgbm.py
+│   └── README.md                  # short description for this folder
+├── Logistic_Regression/
+│   ├── logistic_regression.py
+│   └── README.md
+├── Random_Forest/
+│   ├── rf_bagging.py
+│   └── README.md
+├── Neural_Net/
+│   ├── neuralnet_fe_enc.py
+│   ├── nn_all.py
+│   ├── full_stack_pipeline_local.py
+│   ├── nn_meta_tune_stack.py
+├── Support_Vector_Machine/
+│   ├── svm.py
+│   └── README.md
+├── best_submission/
+│   ├── nn_meta_tune_stack.py
 
 ```
 
